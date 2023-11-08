@@ -34,4 +34,13 @@ CREATE TABLE invoices (
     appointid INT,
     totalamount NUMERIC(10,2) NOT NULL,
     paymentdate DATE
+=======
+-- Create the Doctors table
+CREATE TABLE Doctors (
+    doctorid INT PRIMARY KEY,
+    dfirstname VARCHAR(50),
+    dlastname VARCHAR(50),
+    speciality VARCHAR(100),
+    phone VARCHAR(15),
+    email VARCHAR(100)
 );
