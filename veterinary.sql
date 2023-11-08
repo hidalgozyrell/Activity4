@@ -29,3 +29,9 @@ CREATE TABLE Animals (
     ownerid INT,
     FOREIGN KEY (ownerid) REFERENCES Owners(ownerid)
 );
+CREATE TABLE invoices (
+    invoiceid SERIAL PRIMARY KEY,
+    appointid INT,
+    totalamount NUMERIC(10,2) NOT NULL,
+    paymentdate DATE
+);
