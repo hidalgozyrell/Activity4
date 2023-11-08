@@ -38,3 +38,16 @@ CREATE TABLE Doctors (
     phone VARCHAR(15),
     email VARCHAR(100)
 );
+
+CREATE TABLE MedicalRecords (
+    recordid INT PRIMARY KEY,
+    animalid INT,
+    recorddate TIMESTAMP,
+    doctorid INT,
+    diagnosis TEXT,
+    prescription TEXT,
+    notes TEXT,
+    FOREIGN KEY (animalid) REFERENCES Animals(animalid),
+    FOREIGN KEY (doctorid) REFERENCES Doctors(doctorid)
+);
+
