@@ -10,6 +10,13 @@ CREATE TABLE owners(
 	email VARCHAR(100) NOT NULL
 );
 
+CREATE TABLE appointments(
+	appointid INT PRIMARY KEY,
+	appointdate DATE,
+	reason VARCHAR(255) NOT NULL,
+	animalid INT,
+	foreign key (animalid) references animals(animalid)
+=======
 -- Create the Animals table
 CREATE TABLE Animals (
     animalid INT PRIMARY KEY,
