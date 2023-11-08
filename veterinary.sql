@@ -164,6 +164,7 @@ VALUES
 
     
 =======
+<<<<<<< HEAD
 DELETE FROM invoices
 WHERE appointid = (
 	SELECT appointid 
@@ -178,3 +179,16 @@ WHERE animalid = (
 	FROM animals WHERE name = 'Simba');
 
     
+=======
+>>>>>>> 6c0906b73de670872617b528df8f3bf2fd42c52e
+>>>>>>> e6e169df64564979a5009673fbc6f8a5d34faa71
+<<<<<<< HEAD
+
+
+-- Rename the paymentdate column to paymenttime
+ALTER TABLE Invoices
+CHANGE paymentdate paymenttime TIME;
+=======
+>>>>>>> 5e234e35a01f6719e176de6dbfaa7d51206ba533
+>>>>>>> d353eab495a01fb468147fda1f90eae760807ca2
+>>>>>>> c902a3793708e4285abf4b43f7c9225832733095
