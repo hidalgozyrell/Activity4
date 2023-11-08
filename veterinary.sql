@@ -200,3 +200,7 @@ WHERE doctorid = 4;
 =======
 >>>>>>> c902a3793708e4285abf4b43f7c9225832733095
 >>>>>>> 8f17dcc23502bfde18d4f14a11c32ef9277055cb
+
+-- List the total sales of the veterinary
+SELECT SUM(totalamount) AS total_sales
+FROM Invoices;
