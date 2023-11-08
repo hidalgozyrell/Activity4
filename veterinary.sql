@@ -59,3 +59,17 @@ VALUES
     (9, 'Pedro', 'Santillian', '888 Spruce St, Bacolod', '888-777-3333', 'pedro@example.com'),
     (10, 'Sofia', 'Villianueva', '777 Walnut St, Iloilo', '111-999-3333', 'sofia@example.com');
     
+=======
+CREATE TABLE MedicalRecords (
+    recordid INT PRIMARY KEY,
+    animalid INT,
+    recorddate TIMESTAMP,
+    doctorid INT,
+    diagnosis TEXT,
+    prescription TEXT,
+    notes TEXT,
+    FOREIGN KEY (animalid) REFERENCES Animals(animalid),
+    FOREIGN KEY (doctorid) REFERENCES Doctors(doctorid)
+);
+
+
