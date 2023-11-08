@@ -178,7 +178,9 @@ WHERE animalid = (
 	SELECT animalid 
 	FROM animals WHERE name = 'Simba');
 
-    
+    SELECT DISTINCT species
+FROM animals;
+
 =======
 >>>>>>> 6c0906b73de670872617b528df8f3bf2fd42c52e
 >>>>>>> e6e169df64564979a5009673fbc6f8a5d34faa71
