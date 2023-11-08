@@ -109,3 +109,19 @@ VALUES
     (4, 'Dr. Sofia', 'Reyes', 'Dermatology Specialist', '999-888-7777', 'sofia@example.com'),
     (5, 'Dr. Luis', 'Torres', 'Surgery Specialist', '123-555-7777', 'luis@example.com'),
     (6, 'Dr. Carmen', 'Fernandez', 'Ophthalmology Specialist', '333-222-1111', 'carmen@example.com');
+
+    -- Insert medical record data into the MedicalRecords table
+INSERT INTO MedicalRecords (recordid, animalid, recorddate, doctorid, diagnosis, prescription, notes)
+VALUES
+    (1, 1, '2023-01-05 00:00:00', 1, 'Health check', 'N/A', 'Regular check-up, no issue detected'),
+    (2, 2, '2023-02-05 00:00:00', 2, 'Vaccination', 'Vaccine X', 'Administered vaccination X as per schedule'),
+    (3, 3, '2023-03-05 00:00:00', 3, 'Sprained leg', 'Pain Medication', 'Rest recommended for two weeks'),
+    (4, 4, '2023-04-05 00:00:00', 4, 'Dental Cleaning', 'N/A', 'Completed dental cleaning procedure'),
+    (5, 5, '2023-05-05 00:00:00', 5, 'Skin infection', 'Antibiotics', 'Prescribed antibiotics for skin infection'),
+    (6, 6, '2023-06-05 00:00:00', 6, 'Flea infection', 'Flea Treatment', 'Administered flea treatment'),
+    (7, 7, '2023-07-05 00:00:00', 7, 'Vaccination', 'Vaccine Y', 'Administered vaccination Y as per schedule'),
+    (8, 8, '2023-08-05 00:00:00', 8, 'Spaying', 'N/A', 'Successfully performed spaying surgery'),
+    (9, 9, '2023-09-05 00:00:00', 9, 'Allergic reaction', 'Antihistamines', 'Allergic reaction due to food; prescribed antihistamines'),
+    (10, 10, '2023-10-05 00:00:00', 10, 'Conjunctivitis', 'Eye drops', 'Prescribed eye drops for conjunctivitis');
+
+    
