@@ -175,3 +175,8 @@ CHANGE paymentdate paymenttime TIME;
 =======
 >>>>>>> 5e234e35a01f6719e176de6dbfaa7d51206ba533
 >>>>>>> d353eab495a01fb468147fda1f90eae760807ca2
+
+-- Update the lastname of Dr. Sofia to reyes-gonzales
+UPDATE Doctors
+SET dlastname = 'reyes-gonzales'
+WHERE doctorid = 4;
