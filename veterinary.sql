@@ -164,6 +164,22 @@ VALUES
 
     
 =======
+<<<<<<< HEAD
+DELETE FROM invoices
+WHERE appointid = (
+	SELECT appointid 
+	FROM appointments 
+	WHERE animalid = (
+		SELECT animalid 
+		FROM animals WHERE name = 'Simba'));
+
+DELETE FROM appointments
+WHERE animalid = (
+	SELECT animalid 
+	FROM animals WHERE name = 'Simba');
+
+    
+=======
 >>>>>>> 6c0906b73de670872617b528df8f3bf2fd42c52e
 >>>>>>> e6e169df64564979a5009673fbc6f8a5d34faa71
 <<<<<<< HEAD
@@ -175,8 +191,12 @@ CHANGE paymentdate paymenttime TIME;
 =======
 >>>>>>> 5e234e35a01f6719e176de6dbfaa7d51206ba533
 >>>>>>> d353eab495a01fb468147fda1f90eae760807ca2
+<<<<<<< HEAD
 
 -- Update the lastname of Dr. Sofia to reyes-gonzales
 UPDATE Doctors
 SET dlastname = 'reyes-gonzales'
 WHERE doctorid = 4;
+=======
+>>>>>>> c902a3793708e4285abf4b43f7c9225832733095
+>>>>>>> 8f17dcc23502bfde18d4f14a11c32ef9277055cb
