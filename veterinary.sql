@@ -123,4 +123,24 @@ VALUES
     (4, 'Dr. Sofia', 'Reyes', 'Dermatology Specialist', '999-888-7777', 'sofia@example.com'),
     (5, 'Dr. Luis', 'Torres', 'Surgery Specialist', '123-555-7777', 'luis@example.com'),
     (6, 'Dr. Carmen', 'Fernandez', 'Ophthalmology Specialist', '333-222-1111', 'carmen@example.com');
->>>>>>> 6c0906b73de670872617b528df8f3bf2fd42c52e
+ALTER TABLE owners
+ADD COLUMN registereddate DATE;
+
+-- feat/rename-column-paymenttime
+ALTER TABLE invoices
+RENAME COLUMN paymentdate TO paymenttime;
+
+-- feat/remove-appointment-simba
+DELETE FROM invoices
+WHERE appointid = (
+	SELECT appointid 
+	FROM appointments 
+	WHERE animalid = (
+		SELECT animalid 
+		FROM animals WHERE name = 'Simba'));
+
+DELETE FROM appointments
+WHERE animalid = (
+	SELECT animalid 
+	FROM animals WHERE name = 'Simba');
+
