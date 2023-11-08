@@ -124,6 +124,29 @@ VALUES
     (5, 'Dr. Luis', 'Torres', 'Surgery Specialist', '123-555-7777', 'luis@example.com'),
     (6, 'Dr. Carmen', 'Fernandez', 'Ophthalmology Specialist', '333-222-1111', 'carmen@example.com');
 <<<<<<< HEAD
+ALTER TABLE owners
+ADD COLUMN registereddate DATE;
+
+-- feat/rename-column-paymenttime
+ALTER TABLE invoices
+RENAME COLUMN paymentdate TO paymenttime;
+
+-- feat/remove-appointment-simba
+DELETE FROM invoices
+WHERE appointid = (
+	SELECT appointid 
+	FROM appointments 
+	WHERE animalid = (
+		SELECT animalid 
+		FROM animals WHERE name = 'Simba'));
+
+DELETE FROM appointments
+WHERE animalid = (
+	SELECT animalid 
+	FROM animals WHERE name = 'Simba');
+
+=======
+<<<<<<< HEAD
 
     -- Insert medical record data into the MedicalRecords table
 INSERT INTO MedicalRecords (recordid, animalid, recorddate, doctorid, diagnosis, prescription, notes)
@@ -143,8 +166,12 @@ VALUES
 =======
 >>>>>>> 6c0906b73de670872617b528df8f3bf2fd42c52e
 >>>>>>> e6e169df64564979a5009673fbc6f8a5d34faa71
+<<<<<<< HEAD
 
 
 -- Rename the paymentdate column to paymenttime
 ALTER TABLE Invoices
 CHANGE paymentdate paymenttime TIME;
+=======
+>>>>>>> 5e234e35a01f6719e176de6dbfaa7d51206ba533
+>>>>>>> d353eab495a01fb468147fda1f90eae760807ca2
