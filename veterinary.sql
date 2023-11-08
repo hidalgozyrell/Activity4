@@ -206,3 +206,10 @@ WHERE doctorid = 4;
 -- List the total sales of the veterinary
 SELECT SUM(totalamount) AS total_sales
 FROM Invoices;
+
+-- List the animal with the most appointments scheduled
+SELECT animalid, COUNT(*) AS appointment_count
+FROM Appointments
+GROUP BY animalid
+ORDER BY appointment_count DESC
+LIMIT 1;
